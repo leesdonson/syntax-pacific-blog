@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Syntax Pacific Devlog
 
-## Getting Started
+The official blog website for Syntax Pacific Ltd — a place to share practical product and engineering insights, thoughtful ideas, performance techniques, software strategies, local technology news, and stories that help developers grow.
 
-First, run the development server:
+This project is built as a modern editorial platform for technical writing, with a clean reading experience, responsive layout, category browsing, search, and article discovery features.
+
+## About the project
+
+Syntax Pacific Devlog is designed to publish:
+
+- software engineering tips and tricks
+- product thinking and technical strategy
+- frontend and backend performance ideas
+- architecture and development workflow guidance
+- local tech news and community updates
+- thoughtful writing for fellow developers and curious readers
+
+## Highlights
+
+- Fast, modern Next.js blog experience
+- Responsive layout for desktop and mobile readers
+- Search and filtering by category and tags
+- Featured article presentation and article feed
+- Reading-focused design for long-form technical content
+- Built for publishing developer-first content with code snippets and structured posts
+
+## Tech stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Lucide icons and motion-based UI polish
+
+## Getting started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+src/
+  app/                 # App router pages and layouts
+  components/          # Reusable UI and blog components
+  data/                # Blog post definitions and metadata
+  hooks/               # Client-side interactions and search state
+  layouts/             # Page layout composition
+  pages/               # Page-level components
+  types/               # Shared TypeScript types
+  utils/               # Helpers for dates, slugs, markdown, and reading time
+public/                # Static assets and icons
+```
 
-## Learn More
+## Content model
 
-To learn more about Next.js, take a look at the following resources:
+Blog content is organized in the data layer, with posts defined in `src/data/posts.ts`. Each post includes metadata such as:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- title and slug
+- excerpt
+- publication date
+- category
+- tags
+- author
+- cover snippet
+- article content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This makes it easy to add new writing and keep the front-end blog experience consistent.
 
-## Deploy on Vercel
+## Development notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For local development, start from the root of the project and edit the blog content and layouts in the `src` directory. The home feed, filters, and article pages are all built to support a lightweight editorial workflow without needing a heavy CMS.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Why it exists
+
+The site reflects a simple mission: to share practical knowledge, real-world engineering lessons, and thoughtful discussion around software creation and the wider local technology ecosystem. It is a platform for developers to learn, discover, and stay connected with the ideas shaping modern digital work.  
+
+Learn more about our business at [Syntax Pacific](https://syntaxpacific.com.co) official website.
