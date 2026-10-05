@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from "react";
 
 type Handler = (event: KeyboardEvent) => void;

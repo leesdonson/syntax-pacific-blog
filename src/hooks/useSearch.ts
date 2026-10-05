@@ -1,3 +1,5 @@
+"use client";
+
 import { useCallback, useDeferredValue, useMemo, useState } from "react";
 import type { CategorySlug, HydratedPost } from "@/types/blog";
 

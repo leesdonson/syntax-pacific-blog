@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import { Moon, Palette, Sparkles } from "lucide-react";
 import type { AccentName, ThemeMode } from "@/types/blog";
@@ -41,8 +43,7 @@ export function ThemeToggle({
             onClick={() => onAccentChange(option.name)}
             className={cn(
               "relative size-5 cursor-pointer rounded-full transition-transform duration-200 hover:scale-110",
-              accent === option.name &&
-                "ring-2 ring-offset-2 ring-offset-(--color-base)",
+              accent === option.name && "ring-2 ring-offset-2 ring-offset-base",
             )}
             style={{
               backgroundColor: option.hex,

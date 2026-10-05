@@ -1,3 +1,5 @@
+"use client";
+
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { motion, type HTMLMotionProps } from "motion/react";
 import { cn } from "@/utils/cn";

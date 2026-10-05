@@ -9,6 +9,7 @@ import { Badge } from "@/components/common/badge";
 import { Avatar } from "./avatar";
 import { formatDate, toISODate } from "@/utils/date";
 import { cn } from "@/utils/cn";
+import Image from "next/image";
 
 export interface PostCardProps {
   readonly post: HydratedPost;
@@ -82,16 +83,27 @@ function PostCardImpl({ post, index = 0, featured = false }: PostCardProps) {
             </span>
           </div>
 
-          <pre className="overflow-hidden font-mono text-[11px] leading-relaxed text-slate-400">
-            <code>{post.cover.snippet ?? post.excerpt.slice(0, 120)}</code>
-          </pre>
+          {post.cover.image ? (
+            <div className="w-full h-50 relative rounded-lg overflow-hidden">
+              <Image
+                alt={post.cover.caption}
+                src={post.cover.image}
+                sizes="100%"
+                fill
+              />
+            </div>
+          ) : (
+            <pre className="overflow-hidden font-mono text-[11px] leading-relaxed text-slate-400">
+              <code>{post.cover.snippet ?? post.excerpt.slice(0, 120)}</code>
+            </pre>
+          )}
         </div>
       </div>
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-3 flex flex-wrap items-center gap-2">
-          <Badge variant="accent">{post.categoryMeta.label}</Badge>
+          <Badge variant="accent">{post.categoryMeta?.label}</Badge>
           {post.tags.slice(0, featured ? 3 : 2).map((tag) => (
             <Badge key={tag} variant="outline">
               #{tag}

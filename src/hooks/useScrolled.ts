@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 /** Returns true once the window has scrolled past `offset` pixels. */

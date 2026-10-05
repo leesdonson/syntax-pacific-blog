@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 /** Vertical reading progress (0 → 1) of a given element, for the top bar. */

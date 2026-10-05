@@ -65,8 +65,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-3 border-t border-line py-6 sm:flex-row">
           <p className="font-mono text-xs text-ink-faint">
-            © {YEAR} ColorBytes.dev — built with React 19, Vite &amp; Tailwind
-            v4
+            © {YEAR} ColorBytes.dev — Built for devs by devs
           </p>
           <p className="font-mono text-xs text-ink-faint">
             <span className="text-emerald-glow">●</span> all systems operational

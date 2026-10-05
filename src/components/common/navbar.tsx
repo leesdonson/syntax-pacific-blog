@@ -26,8 +26,10 @@ export interface NavbarProps {
 const PRIMARY_LINKS = [
   { href: "/", label: "Home", end: true },
   { href: "/category/react", label: "React", end: false },
+  { href: "/category/nextjs", label: "Next.js", end: false },
   { href: "/category/typescript", label: "TypeScript", end: false },
   { href: "/category/performance", label: "Performance", end: false },
+  { href: "/category/tech-news", label: "Tech News", end: false },
 ] as const;
 
 export function Navbar({
@@ -144,7 +146,7 @@ export function Navbar({
             </div>
 
             <a
-              href="https://github.com"
+              href="https://github.com/leesdonson/syntax-pacific-blog"
               target="_blank"
               rel="noreferrer noopener"
               className="hidden items-center gap-2 rounded border border-accent/40 bg-accent/8 px-3.5 py-2 font-mono text-xs text-accent transition-all lg:inline-flex"

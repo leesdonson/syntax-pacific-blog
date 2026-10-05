@@ -50,7 +50,7 @@ export const authors: readonly Author[] = [
     socials: {
       github: "https://github.com",
       x: "https://x.com",
-      rss: "/rss.xml",
+      // rss: "/rss.xml",
     },
   },
 ] as const;
@@ -66,6 +66,12 @@ export const categories: readonly Category[] = [
     description:
       "Components, concurrency, and everything the renderer does behind your back.",
     accent: "cyan",
+  },
+  {
+    slug: "nextjs",
+    label: "Next.js",
+    description: "Best Nextjs tips that makes your app superpower.",
+    accent: "purple",
   },
   {
     slug: "typescript",
@@ -99,6 +105,12 @@ export const categories: readonly Category[] = [
     slug: "ai",
     label: "AI",
     description: "Practical LLM plumbing for product engineers.",
+    accent: "purple",
+  },
+  {
+    slug: "tech-news",
+    label: "Tech News",
+    description: "Latest updates and insights from the world of technology.",
     accent: "purple",
   },
 ] as const;

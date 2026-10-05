@@ -11,10 +11,12 @@ export type ThemeMode = "dark" | "darker";
 export type CategorySlug =
   | "engineering"
   | "react"
+  | "nextjs"
   | "typescript"
   | "performance"
   | "devops"
-  | "ai";
+  | "ai"
+  | "tech-news";
 
 export interface Tag {
   readonly id: string;
@@ -74,10 +76,12 @@ export interface Post {
 }
 
 export interface PostCover {
-  readonly kind: "terminal" | "gradient" | "code";
+  readonly kind: "terminal" | "gradient" | "code" | "image";
   readonly caption: string;
   readonly snippet?: string;
   readonly language?: CodeLanguage;
+  readonly image?: string;
+  // readonly gradient?: readonly [string, string];
 }
 
 export type CodeLanguage =
